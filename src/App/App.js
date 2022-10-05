@@ -6,13 +6,9 @@ import Preview from '../components/Preview/Preview';
 import Footer from '../components/Footer/Footer';
 
 function App() {
-  const [firstName, setFirstName] = useState();
-  const updateName = (n) => {
-    if (!n) {
-      setFirstName('Your name here');
-    } else {
-      setFirstName(n);
-    }
+  const [personalInfo, setPersonalInfo] = useState({ firstName: '', lastName: '', title: '' });// This isn't making the personalInfo var an object. It's just the default var.
+  const updatePersonal = (n) => {
+    setPersonalInfo(n);
   };
   return (
     <div className="App">
@@ -21,10 +17,13 @@ function App() {
       </header>
       <main>
         <div className="formArea">
-          <Form funcy={updateName} />
+          {/* sending the setter all the way to PersonalDetail */}
+          <Form setter={updatePersonal} />
         </div>
         <div className="previewArea">
-          <Preview first={firstName} />
+          {/* I would like this var to be a consistant object I can mess with.
+          Right now it's getting random info */}
+          <Preview pInfo={personalInfo} />
         </div>
       </main>
       <footer>

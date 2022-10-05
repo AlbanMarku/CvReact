@@ -3,11 +3,11 @@ import React from 'react';
 import './form.css';
 import PersonalDetail from './PersonalDetail/PersonalDetail';
 
-function Form({ funcy }) {
+function Form({ setter }) {
   return (
     <div className="Form">
       <form>
-        <PersonalDetail funcer={funcy} />
+        <PersonalDetail setter={setter} />
       </form>
     </div>
   );
