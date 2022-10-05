@@ -1,11 +1,19 @@
 import './App.css';
-import React from 'react';
+import React, { useState } from 'react';
 import Header from '../components/Header/Header';
 import Form from '../components/Form/Form';
 import Preview from '../components/Preview/Preview';
 import Footer from '../components/Footer/Footer';
 
 function App() {
+  const [firstName, setFirstName] = useState();
+  const updateName = (n) => {
+    if (!n) {
+      setFirstName('Your name here');
+    } else {
+      setFirstName(n);
+    }
+  };
   return (
     <div className="App">
       <header>
@@ -13,10 +21,10 @@ function App() {
       </header>
       <main>
         <div className="formArea">
-          <Form />
+          <Form funcy={updateName} />
         </div>
         <div className="previewArea">
-          <Preview />
+          <Preview first={firstName} />
         </div>
       </main>
       <footer>

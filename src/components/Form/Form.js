@@ -1,10 +1,14 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
 import './form.css';
+import PersonalDetail from './PersonalDetail/PersonalDetail';
 
-function Form() {
+function Form({ funcy }) {
   return (
     <div className="Form">
-      <p>Form area</p>
+      <form>
+        <PersonalDetail funcer={funcy} />
+      </form>
     </div>
   );
 }

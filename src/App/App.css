@@ -9,12 +9,12 @@
 
 .App > * {
 	padding: 2rem;
+	display: flex;
 }
 
 header {
 	border: solid pink;
 	height: 80px;
-	display: flex;
 	align-items: center;
 	justify-content: center;
 }
@@ -22,7 +22,6 @@ header {
 main {
 	border: solid yellow;
 	flex: 1;
-	display: flex;
 	justify-content: space-between;
 	align-items: flex-start;
 }
@@ -46,7 +45,6 @@ main {
 footer {
 	border: solid green;
 	height: 80px;
-	display: flex;
 	justify-content: center;
 	align-items: center;
 }
