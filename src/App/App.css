@@ -1,0 +1,52 @@
+.App {
+	background-color: rgb(29, 29, 29);
+	color: white;
+	min-height: 100vh;
+	padding: 2rem;
+	display: flex;
+	flex-direction: column;
+}
+
+.App > * {
+	padding: 2rem;
+}
+
+header {
+	border: solid pink;
+	height: 80px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+main {
+	border: solid yellow;
+	flex: 1;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+
+.formArea {
+	border: solid orange;
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.previewArea {
+	border: solid white;
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+footer {
+	border: solid green;
+	height: 80px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
