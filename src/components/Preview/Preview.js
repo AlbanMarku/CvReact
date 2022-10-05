@@ -4,13 +4,19 @@ import './preview.css';
 // import PropTypes from 'prop-types';
 
 function Preview({ pInfo }) {
-  // this would work as expected if i actully recieved an object i can use
-  const first = pInfo.firstName;
-  const second = pInfo.lastName;
+  let { firstName } = pInfo;
+  let { lastName } = pInfo;
+  let { title } = pInfo;
+
+  if (!firstName) firstName = 'name';
+  if (!lastName) lastName = 'last name';
+  if (!title) title = 'title';
+
   return (
     <div className="Preview">
-      <p>{first}</p>
-      <p>{second}</p>
+      <p>{firstName}</p>
+      <p>{lastName}</p>
+      <p>{title}</p>
     </div>
   );
 }

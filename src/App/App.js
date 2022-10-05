@@ -17,12 +17,9 @@ function App() {
       </header>
       <main>
         <div className="formArea">
-          {/* sending the setter all the way to PersonalDetail */}
-          <Form setter={updatePersonal} />
+          <Form setter={updatePersonal} info={personalInfo} />
         </div>
         <div className="previewArea">
-          {/* I would like this var to be a consistant object I can mess with.
-          Right now it's getting random info */}
           <Preview pInfo={personalInfo} />
         </div>
       </main>
