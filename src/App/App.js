@@ -7,6 +7,7 @@ import Footer from '../components/Footer/Footer';
 
 function App() {
   const [personalInfo, setPersonalInfo] = useState({ firstName: '', lastName: '', title: '' });
+  const [experienceInfo, setExperienceInfo] = useState({ pos: '', years: '', company: '' });
   const updatePersonal = (n) => {
     setPersonalInfo(n);
   };
@@ -17,10 +18,18 @@ function App() {
       </header>
       <main>
         <div className="formArea">
-          <Form setter={updatePersonal} info={personalInfo} />
+          <Form
+            setter={updatePersonal}
+            info={personalInfo}
+            expSetter={setExperienceInfo}
+            expInfo={experienceInfo}
+          />
         </div>
         <div className="previewArea">
-          <Preview pInfo={personalInfo} />
+          <Preview
+            pInfo={personalInfo}
+            expInfo={experienceInfo}
+          />
         </div>
       </main>
       <footer>

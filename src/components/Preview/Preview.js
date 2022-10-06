@@ -2,14 +2,16 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './preview.css';
 
-function Preview({ pInfo }) {
+function Preview({ pInfo, expInfo }) {
   let { firstName } = pInfo;
   let { lastName } = pInfo;
   let { title } = pInfo;
+  let { pos } = expInfo;
 
   if (!firstName) firstName = 'name';
   if (!lastName) lastName = 'last name';
   if (!title) title = 'title';
+  if (!pos) pos = 'Position';
 
   return (
     <div className="Preview">
@@ -20,7 +22,7 @@ function Preview({ pInfo }) {
         <h3>{title}</h3>
       </div>
       <div className="experienceDetails">
-        <p>exp</p>
+        <h2>{pos}</h2>
       </div>
       <div className="educationDetails">
         <p>education</p>
@@ -36,4 +38,6 @@ export default Preview;
 
 Preview.propTypes = {
   pInfo: PropTypes.objectOf(PropTypes.string).isRequired,
+  expInfo: PropTypes.objectOf(PropTypes.string).isRequired,
+
 };

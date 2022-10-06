@@ -1,11 +1,16 @@
 .Preview {
 	border: solid orange;
 	display: grid;
+	grid-template-columns: 500px auto;
 	grid-template-areas:
 		"head head"
 		"exp side"
 		"edu side";
 	width: 100%;
+}
+
+.Preview > * {
+	overflow-wrap: break-word;
 }
 
 .headerDetails {
