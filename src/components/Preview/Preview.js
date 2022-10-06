@@ -1,7 +1,6 @@
-/* eslint-disable react/prop-types */
 import React from 'react';
+import PropTypes from 'prop-types';
 import './preview.css';
-// import PropTypes from 'prop-types';
 
 function Preview({ pInfo }) {
   let { firstName } = pInfo;
@@ -14,11 +13,27 @@ function Preview({ pInfo }) {
 
   return (
     <div className="Preview">
-      <p>{firstName}</p>
-      <p>{lastName}</p>
-      <p>{title}</p>
+      <div className="headerDetails">
+        <h1>
+          {`${firstName} ${lastName}`}
+        </h1>
+        <h3>{title}</h3>
+      </div>
+      <div className="experienceDetails">
+        <p>exp</p>
+      </div>
+      <div className="educationDetails">
+        <p>education</p>
+      </div>
+      <div className="sideDetails">
+        <p>side area</p>
+      </div>
     </div>
   );
 }
 
 export default Preview;
+
+Preview.propTypes = {
+  pInfo: PropTypes.objectOf(PropTypes.string).isRequired,
+};

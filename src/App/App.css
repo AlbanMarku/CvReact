@@ -22,24 +22,25 @@ header {
 main {
 	border: solid yellow;
 	flex: 1;
-	justify-content: space-between;
+	justify-content: center;
+	gap: 60px;
 	align-items: flex-start;
 }
 
 .formArea {
 	border: solid orange;
-	flex: 1;
 	display: flex;
 	flex-direction: column;
-	align-items: center;
+	flex: 1 1 700px;
 }
 
 .previewArea {
 	border: solid white;
-	flex: 1;
 	display: flex;
+	flex: 0 0 800px;
 	flex-direction: column;
 	align-items: center;
+	justify-content: center;
 }
 
 footer {

@@ -6,7 +6,7 @@ import Preview from '../components/Preview/Preview';
 import Footer from '../components/Footer/Footer';
 
 function App() {
-  const [personalInfo, setPersonalInfo] = useState({ firstName: '', lastName: '', title: '' });// This isn't making the personalInfo var an object. It's just the default var.
+  const [personalInfo, setPersonalInfo] = useState({ firstName: '', lastName: '', title: '' });
   const updatePersonal = (n) => {
     setPersonalInfo(n);
   };

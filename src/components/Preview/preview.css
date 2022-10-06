@@ -1,2 +1,33 @@
 .Preview {
+	border: solid orange;
+	display: grid;
+	grid-template-areas:
+		"head head"
+		"exp side"
+		"edu side";
+	width: 100%;
+}
+
+.headerDetails {
+	grid-area: head;
+	border: solid blue;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
+}
+
+.experienceDetails {
+	grid-area: exp;
+	border: solid pink;
+}
+
+.educationDetails {
+	grid-area: edu;
+	border: solid yellow;
+}
+
+.sideDetails {
+	grid-area: side;
+	border: solid red;
 }
