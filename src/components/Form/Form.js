@@ -12,10 +12,19 @@ function Form({
     <div className="Form">
       <form>
         <PersonalDetail setter={setter} info={info} />
+        <h2>Experience stuff</h2>
         <ExperienceDetail
           expComp={expComp}
           expCompSetter={expCompSetter}
         />
+        {
+          expComp.map(() => (
+            <ExperienceDetail
+              expComp={expComp}
+              expCompSetter={expCompSetter}
+            />
+          ))
+        }
       </form>
     </div>
   );
