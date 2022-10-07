@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React from 'react';
 import PropTypes from 'prop-types';
 import './preview.css';
@@ -6,12 +7,12 @@ function Preview({ pInfo, expInfo }) {
   let { firstName } = pInfo;
   let { lastName } = pInfo;
   let { title } = pInfo;
-  let { pos } = expInfo;
+  // let { pos } = expInfo;
 
   if (!firstName) firstName = 'name';
   if (!lastName) lastName = 'last name';
   if (!title) title = 'title';
-  if (!pos) pos = 'Position';
+  // if (!pos) pos = 'Position';
 
   return (
     <div className="Preview">
@@ -22,7 +23,7 @@ function Preview({ pInfo, expInfo }) {
         <h3>{title}</h3>
       </div>
       <div className="experienceDetails">
-        <h2>{pos}</h2>
+        hey
       </div>
       <div className="educationDetails">
         <p>education</p>

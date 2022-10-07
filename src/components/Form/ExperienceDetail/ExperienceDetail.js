@@ -1,12 +1,22 @@
-import React from 'react';
+/* eslint-disable no-unused-vars */
+/* eslint-disable react/prop-types */
+/* eslint-disable react/no-unused-prop-types */
+import React, { useState } from 'react';
 import './experienceDetail.css';
 import PropTypes from 'prop-types';
 
-function ExperienceDetail({ expSetter, expInfo }) {
+function ExperienceDetail({
+  expComp, expCompSetter,
+}) {
+  const [experienceInfo, setExperienceInfo] = useState({ pos: '' });
+  const handleClick = () => {
+    expCompSetter([...expComp, experienceInfo]);
+  };
   return (
     <div className="Exp">
       <h2>Experience details</h2>
-      <input value={expInfo.pos} id="position" type="text" placeholder="Position" required onChange={(e) => expSetter({ ...expInfo, pos: e.target.value })} />
+      <input value={experienceInfo.pos} id="position" type="text" placeholder="Position" required onChange={(e) => setExperienceInfo({ pos: e.target.value })} />
+      <button type="button" onClick={handleClick}>Click me</button>
     </div>
   );
 }

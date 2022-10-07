@@ -7,7 +7,7 @@ import Footer from '../components/Footer/Footer';
 
 function App() {
   const [personalInfo, setPersonalInfo] = useState({ firstName: '', lastName: '', title: '' });
-  const [experienceInfo, setExperienceInfo] = useState({ pos: '', years: '', company: '' });
+  const [expComponents, setExpComponents] = useState([]);
   const updatePersonal = (n) => {
     setPersonalInfo(n);
   };
@@ -21,14 +21,14 @@ function App() {
           <Form
             setter={updatePersonal}
             info={personalInfo}
-            expSetter={setExperienceInfo}
-            expInfo={experienceInfo}
+            expComp={expComponents}
+            expCompSetter={setExpComponents}
           />
         </div>
         <div className="previewArea">
           <Preview
             pInfo={personalInfo}
-            expInfo={experienceInfo}
+            // expInfo={experienceInfo}
           />
         </div>
       </main>
