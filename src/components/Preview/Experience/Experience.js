@@ -1,5 +1,5 @@
-/* eslint-disable react/prop-types */
 import React from 'react';
+import PropTypes from 'prop-types';
 
 function Experience({ pos }) {
   let position = pos;
@@ -10,3 +10,7 @@ function Experience({ pos }) {
 }
 
 export default Experience;
+
+Experience.propTypes = {
+  pos: PropTypes.string.isRequired,
+};

@@ -1,5 +1,3 @@
-/* eslint-disable no-plusplus */
-/* eslint-disable react/prop-types */
 import React from 'react';
 import './form.css';
 import PropTypes from 'prop-types';
@@ -9,10 +7,11 @@ import ExperienceDetail from './ExperienceDetail/ExperienceDetail';
 function Form({
   setter, info, expComp, expCompSetter, handleCheck,
 }) {
-  let uniqueId = -1;
+  let uniqueId = -1; // lmao
 
   const handleClick = () => {
-    expCompSetter([...expComp, { pos: '', id: '' }]);
+    uniqueId += 1;
+    expCompSetter([...expComp, { pos: '', id: uniqueId }]);
   };
   return (
     <div className="Form">
@@ -21,11 +20,9 @@ function Form({
         <h2>Experience stuff</h2>
         {
           expComp.map(() => {
-            uniqueId++;
+            uniqueId += 1;// This is so btec.
             return (
               <ExperienceDetail
-                expComp={expComp}
-                expCompSetter={expCompSetter}
                 handleCheck={handleCheck}
                 id={uniqueId}
               />
@@ -43,4 +40,8 @@ export default Form;
 Form.propTypes = {
   setter: PropTypes.func.isRequired,
   info: PropTypes.objectOf(PropTypes.string).isRequired,
+  expComp: PropTypes.objectOf(PropTypes.number).isRequired,
+  expCompSetter: PropTypes.func.isRequired,
+  handleCheck: PropTypes.func.isRequired,
+
 };

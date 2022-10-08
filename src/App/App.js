@@ -9,12 +9,10 @@ function App() {
   const [personalInfo, setPersonalInfo] = useState({ firstName: '', lastName: '', title: '' });
   const [expComponents, setExpComponents] = useState([{ pos: '', id: 0 }]);
   const handleArray = (item) => {
-    const modifiedArr = expComponents.map((arrayItem, i) => {
-      if (item.id === i) {
-        console.log('yes change');
+    const modifiedArr = expComponents.map((arrayItem) => {
+      if (item.id === arrayItem.id) {
         return item;
       }
-      console.log('nah');
       return arrayItem;
     });
     setExpComponents(modifiedArr);
