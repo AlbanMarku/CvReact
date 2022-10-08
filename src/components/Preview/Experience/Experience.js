@@ -3,7 +3,7 @@ import React from 'react';
 
 function Experience({ pos }) {
   let position = pos;
-  if (!position) position = 'here';
+  if (!position) position = 'nothing';
   return (
     <h1>{position}</h1>
   );

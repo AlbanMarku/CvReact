@@ -7,7 +7,18 @@ import Footer from '../components/Footer/Footer';
 
 function App() {
   const [personalInfo, setPersonalInfo] = useState({ firstName: '', lastName: '', title: '' });
-  const [expComponents, setExpComponents] = useState([]);
+  const [expComponents, setExpComponents] = useState([{ pos: '', id: 0 }]);
+  const handleArray = (item) => {
+    const modifiedArr = expComponents.map((arrayItem, i) => {
+      if (item.id === i) {
+        console.log('yes change');
+        return item;
+      }
+      console.log('nah');
+      return arrayItem;
+    });
+    setExpComponents(modifiedArr);
+  };
   const updatePersonal = (n) => {
     setPersonalInfo(n);
   };
@@ -23,12 +34,13 @@ function App() {
             info={personalInfo}
             expComp={expComponents}
             expCompSetter={setExpComponents}
+            handleCheck={handleArray}
           />
         </div>
         <div className="previewArea">
           <Preview
             pInfo={personalInfo}
-            // expInfo={experienceInfo}
+            expComp={expComponents}
           />
         </div>
       </main>

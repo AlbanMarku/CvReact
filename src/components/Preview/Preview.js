@@ -2,28 +2,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './preview.css';
+import Personal from './Personal/Personal';
+import Experience from './Experience/Experience';
 
-function Preview({ pInfo, expInfo }) {
-  let { firstName } = pInfo;
-  let { lastName } = pInfo;
-  let { title } = pInfo;
-  // let { pos } = expInfo;
-
-  if (!firstName) firstName = 'name';
-  if (!lastName) lastName = 'last name';
-  if (!title) title = 'title';
-  // if (!pos) pos = 'Position';
-
+function Preview({ pInfo, expComp }) {
   return (
     <div className="Preview">
       <div className="headerDetails">
-        <h1>
-          {`${firstName} ${lastName}`}
-        </h1>
-        <h3>{title}</h3>
+        <Personal pInfo={pInfo} />
       </div>
       <div className="experienceDetails">
-        hey
+        {
+          expComp.map((obj) => <Experience pos={obj.pos} />)
+        }
       </div>
       <div className="educationDetails">
         <p>education</p>
@@ -39,6 +30,6 @@ export default Preview;
 
 Preview.propTypes = {
   pInfo: PropTypes.objectOf(PropTypes.string).isRequired,
-  expInfo: PropTypes.objectOf(PropTypes.string).isRequired,
+  expComp: PropTypes.objectOf(PropTypes.string).isRequired,
 
 };

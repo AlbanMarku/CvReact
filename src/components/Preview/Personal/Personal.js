@@ -2,7 +2,14 @@
 import React from 'react';
 import './personal.css';
 
-function Personal({ firstName, lastName, title }) {
+function Personal({ pInfo }) {
+  let { firstName } = pInfo;
+  let { lastName } = pInfo;
+  let { title } = pInfo;
+
+  if (!firstName) firstName = 'name';
+  if (!lastName) lastName = 'last name';
+  if (!title) title = 'title';
   return (
     <div className="Personal">
       <h1>
