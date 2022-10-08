@@ -1,5 +1,5 @@
 import './App.css';
-import React, { useState } from 'react';
+import React, { useState, useCallback } from 'react';
 import Header from '../components/Header/Header';
 import Form from '../components/Form/Form';
 import Preview from '../components/Preview/Preview';
@@ -8,7 +8,8 @@ import Footer from '../components/Footer/Footer';
 function App() {
   const [personalInfo, setPersonalInfo] = useState({ firstName: '', lastName: '', title: '' });
   const [expComponents, setExpComponents] = useState([{ pos: '', id: 0 }]);
-  const handleArray = (item) => {
+
+  const handleArray = useCallback((item) => {
     const modifiedArr = expComponents.map((arrayItem) => {
       if (item.id === arrayItem.id) {
         return item;
@@ -16,7 +17,8 @@ function App() {
       return arrayItem;
     });
     setExpComponents(modifiedArr);
-  };
+  }, [expComponents]);
+
   const updatePersonal = (n) => {
     setPersonalInfo(n);
   };

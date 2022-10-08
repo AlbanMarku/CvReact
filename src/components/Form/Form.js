@@ -19,12 +19,12 @@ function Form({
         <PersonalDetail setter={setter} info={info} />
         <h2>Experience stuff</h2>
         {
-          expComp.map(() => {
+          expComp.map((expCompItem) => {
             uniqueId += 1;// This is so btec.
             return (
               <ExperienceDetail
                 handleCheck={handleCheck}
-                id={uniqueId}
+                expInfo={expCompItem}
               />
             );
           })
