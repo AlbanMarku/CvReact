@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 function ExperienceDetail({
   handleCheck, id,
 }) {
-  const [experienceInfo, setExperienceInfo] = useState({ pos: '', id: 0 });
+  const [experienceInfo, setExperienceInfo] = useState({ pos: '', id: null });
 
   const handleChange = (content) => {
     setExperienceInfo({ pos: content, id });
