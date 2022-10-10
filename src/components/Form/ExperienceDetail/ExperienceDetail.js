@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+/* eslint-disable react-hooks/exhaustive-deps */
+import React, { useState, useEffect } from 'react';
 import './experienceDetail.css';
 import PropTypes from 'prop-types';
 
@@ -9,8 +10,12 @@ function ExperienceDetail({
 
   const handleChange = (content) => {
     setExperienceInfo({ pos: content, id });
-    handleCheck(experienceInfo);
   };
+
+  useEffect(() => {
+    handleCheck(experienceInfo);
+  }, [experienceInfo]);
+
   return (
     <div className="Exp">
       <h3>Details</h3>
