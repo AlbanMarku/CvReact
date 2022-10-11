@@ -11,7 +11,9 @@ function Form({
 
   const handleClick = () => {
     uniqueId += 1;
-    expCompSetter([...expComp, { pos: '', id: uniqueId }]);
+    expCompSetter([...expComp, {
+      pos: '', workMonths: '', company: '', id: uniqueId,
+    }]);
   };
   return (
     <div className="Form">

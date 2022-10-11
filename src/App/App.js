@@ -7,7 +7,9 @@ import Footer from '../components/Footer/Footer';
 
 function App() {
   const [personalInfo, setPersonalInfo] = useState({ firstName: '', lastName: '', title: '' });
-  const [expComponents, setExpComponents] = useState([{ pos: '', id: 0 }]);
+  const [expComponents, setExpComponents] = useState([{
+    pos: '', workMonths: '', company: '', id: 0,
+  }]);
   const handleArray = (item) => {
     const modifiedArr = expComponents.map((arrayItem) => {
       if (item.id === arrayItem.id) {

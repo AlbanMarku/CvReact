@@ -12,7 +12,13 @@ function Preview({ pInfo, expComp }) {
       </div>
       <div className="experienceDetails">
         {
-          expComp.map((obj) => <Experience pos={obj.pos} />)
+          expComp.map((obj) => (
+            <Experience
+              pos={obj.pos}
+              workTime={obj.workMonths}
+              comp={obj.company}
+            />
+          ))
         }
       </div>
       <div className="educationDetails">
