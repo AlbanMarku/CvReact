@@ -29,6 +29,8 @@ function ExperienceDetail({
   return (
     <div className="Exp">
       <h3>Details</h3>
+      <h1>{id}</h1>
+      {/* debug */}
       <input value={experienceInfo.pos} id="position" type="text" placeholder="Position" required onChange={(e) => handleChange(e.target.value)} />
       <h3>Work Months</h3>
       <input value={experienceInfo.workTime} id="workTime" type="text" placeholder="Amount of months" required onChange={(e) => handleTime(e.target.value)} />

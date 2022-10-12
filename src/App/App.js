@@ -1,5 +1,6 @@
 import './App.css';
 import React, { useState } from 'react';
+import uniqid from 'uniqid';
 import Header from '../components/Header/Header';
 import Form from '../components/Form/Form';
 import Preview from '../components/Preview/Preview';
@@ -8,7 +9,7 @@ import Footer from '../components/Footer/Footer';
 function App() {
   const [personalInfo, setPersonalInfo] = useState({ firstName: '', lastName: '', title: '' });
   const [expComponents, setExpComponents] = useState([{
-    pos: '', workMonths: '', company: '', id: 0,
+    pos: '', workMonths: '', company: '', id: uniqid('expObj-'),
   }]);
   const handleArray = (item) => {
     const modifiedArr = expComponents.map((arrayItem) => {
