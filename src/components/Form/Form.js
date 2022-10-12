@@ -7,7 +7,7 @@ import PersonalDetail from './PersonalDetail/PersonalDetail';
 import ExperienceDetail from './ExperienceDetail/ExperienceDetail';
 
 function Form({
-  setter, info, expComp, expCompSetter, handleCheck,
+  setter, info, expComp, expCompSetter,
 }) {
   const handleClick = () => {
     expCompSetter([...expComp, {
@@ -22,8 +22,9 @@ function Form({
         {
           expComp.map((obj) => (
             <ExperienceDetail
-              handleCheck={handleCheck}
               id={obj.id}
+              expComp={expComp}
+              expCompSetter={expCompSetter}
             />
           ))
         }
@@ -40,6 +41,4 @@ Form.propTypes = {
   info: PropTypes.objectOf(PropTypes.string).isRequired,
   expComp: PropTypes.objectOf(PropTypes.number).isRequired,
   expCompSetter: PropTypes.func.isRequired,
-  handleCheck: PropTypes.func.isRequired,
-
 };
