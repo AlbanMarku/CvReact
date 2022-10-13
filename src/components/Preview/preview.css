@@ -1,5 +1,4 @@
 .Preview {
-	border: solid orange;
 	display: grid;
 	grid-template-columns: 500px auto;
 	grid-template-areas:
@@ -7,32 +6,38 @@
 		"exp side"
 		"edu side";
 	width: 100%;
+	color: white;
+	box-shadow: 10px 10px 10px black;
 }
 
 .Preview > * {
 	overflow-wrap: break-word;
 }
 
+.previewTitle {
+	border-bottom: solid white;
+	padding-bottom: 10px;
+}
+
 .headerDetails {
 	grid-area: head;
-	border: solid blue;
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
 	justify-content: center;
+	padding: 20px;
+	background-color: rgb(3, 3, 104);
 }
 
 .experienceDetails {
 	grid-area: exp;
-	border: solid pink;
+	padding: 20px;
 }
 
 .educationDetails {
 	grid-area: edu;
-	border: solid yellow;
 }
 
 .sideDetails {
 	grid-area: side;
-	border: solid red;
 }

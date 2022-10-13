@@ -12,10 +12,10 @@ function Personal({ pInfo }) {
   if (!title) title = 'title';
   return (
     <div className="Personal">
+      <h2>{title}</h2>
       <h1>
         {`${firstName} ${lastName}`}
       </h1>
-      <h3>{title}</h3>
     </div>
   );
 }

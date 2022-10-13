@@ -11,6 +11,7 @@ function Preview({ pInfo, expComp }) {
         <Personal pInfo={pInfo} />
       </div>
       <div className="experienceDetails">
+        <h2 className="previewTitle">Experience</h2>
         {
           expComp.map((obj) => (
             <Experience

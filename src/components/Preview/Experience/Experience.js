@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './experience.css';
 
 function Experience({ pos, comp, workTime }) {
   let position = pos;
@@ -10,9 +11,9 @@ function Experience({ pos, comp, workTime }) {
   if (!workMonths) workMonths = 'Amount of months';
   return (
     <div className="Experience">
-      <h1>{position}</h1>
-      <h1>{workMonths}</h1>
-      <h1>{company}</h1>
+      <p>{position}</p>
+      <p>{workMonths}</p>
+      <p>{company}</p>
     </div>
   );
 }

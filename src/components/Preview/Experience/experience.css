@@ -1,0 +1,7 @@
+.Experience {
+	margin: 20px 0px;
+}
+
+.Experience > * {
+	margin: 10px 0px;
+}

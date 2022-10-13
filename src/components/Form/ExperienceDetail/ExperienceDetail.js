@@ -1,13 +1,9 @@
-/* eslint-disable no-undef */
-/* eslint-disable react-hooks/exhaustive-deps */
-/* eslint-disable react/prop-types */
-// TODO: Fix this stuff ^^^
 import React, { useState, useEffect } from 'react';
 import './experienceDetail.css';
 import PropTypes from 'prop-types';
 
 function ExperienceDetail({
-  id, expComp, expCompSetter,
+  handleCheck, id,
 }) {
   const [experienceInfo, setExperienceInfo] = useState({
     pos: '', workMonths: '', company: '', id: null,
@@ -26,13 +22,8 @@ function ExperienceDetail({
   };
 
   useEffect(() => {
-    const modifiedArr = expComp.map((arrayItem) => {
-      if (item.id === arrayItem.id) {
-        return item;
-      }
-      return arrayItem;
-    });
-    expCompSetter(modifiedArr);
+    handleCheck(experienceInfo);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [experienceInfo]);
 
   return (
@@ -51,5 +42,6 @@ function ExperienceDetail({
 export default ExperienceDetail;
 
 ExperienceDetail.propTypes = {
+  handleCheck: PropTypes.func.isRequired,
   id: PropTypes.number.isRequired,
 };

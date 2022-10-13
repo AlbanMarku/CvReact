@@ -1,2 +1,26 @@
-.Form {
+input {
+	border-style: none;
+	width: 100%;
+	height: 30px;
+	background-color: grey;
+	color: black;
+	border-radius: 5px;
+	padding: 10px;
+	margin: 10px 0px;
+}
+.titles {
+	background-color: rgb(61, 59, 59);
+	padding: 20px;
+}
+
+.compBtn {
+	display: flex;
+	justify-content: center;
+	background-color: black;
+	margin: 20px;
+}
+
+.compBtn button {
+	padding: 10px;
+	width: 100%;
 }

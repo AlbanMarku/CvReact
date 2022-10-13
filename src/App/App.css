@@ -13,14 +13,12 @@
 }
 
 header {
-	border: solid pink;
 	height: 80px;
 	align-items: center;
 	justify-content: center;
 }
 
 main {
-	border: solid yellow;
 	flex: 1;
 	justify-content: center;
 	gap: 60px;
@@ -28,23 +26,23 @@ main {
 }
 
 .formArea {
-	border: solid orange;
 	display: flex;
 	flex-direction: column;
 	flex: 1 1 700px;
+	background-color: black;
 }
 
 .previewArea {
-	border: solid white;
 	display: flex;
 	flex: 0 0 800px;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+	position: sticky;
+	top: 20px;
 }
 
 footer {
-	border: solid green;
 	height: 80px;
 	justify-content: center;
 	align-items: center;

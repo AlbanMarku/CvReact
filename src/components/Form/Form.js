@@ -7,7 +7,7 @@ import PersonalDetail from './PersonalDetail/PersonalDetail';
 import ExperienceDetail from './ExperienceDetail/ExperienceDetail';
 
 function Form({
-  setter, info, expComp, expCompSetter,
+  setter, info, expComp, expCompSetter, handleCheck,
 }) {
   const handleClick = () => {
     expCompSetter([...expComp, {
@@ -17,18 +17,20 @@ function Form({
   return (
     <div className="Form">
       <form>
+        <h2 className="titles">Personal details</h2>
         <PersonalDetail setter={setter} info={info} />
-        <h2>Experience stuff</h2>
+        <h2 className="titles">Experience stuff</h2>
         {
           expComp.map((obj) => (
             <ExperienceDetail
+              handleCheck={handleCheck}
               id={obj.id}
-              expComp={expComp}
-              expCompSetter={expCompSetter}
             />
           ))
         }
-        <button type="button" onClick={handleClick}>Add comp</button>
+        <div className="compBtn">
+          <button type="button" onClick={handleClick}>Add comp</button>
+        </div>
       </form>
     </div>
   );
@@ -41,4 +43,6 @@ Form.propTypes = {
   info: PropTypes.objectOf(PropTypes.string).isRequired,
   expComp: PropTypes.objectOf(PropTypes.number).isRequired,
   expCompSetter: PropTypes.func.isRequired,
+  handleCheck: PropTypes.func.isRequired,
+
 };

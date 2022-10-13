@@ -11,6 +11,15 @@ function App() {
   const [expComponents, setExpComponents] = useState([{
     pos: '', workMonths: '', company: '', id: uniqid('expObj-'),
   }]);
+  const handleArray = (item) => {
+    const modifiedArr = expComponents.map((arrayItem) => {
+      if (item.id === arrayItem.id) {
+        return item;
+      }
+      return arrayItem;
+    });
+    setExpComponents(modifiedArr);
+  };
   const updatePersonal = (n) => {
     setPersonalInfo(n);
   };
@@ -26,6 +35,7 @@ function App() {
             info={personalInfo}
             expComp={expComponents}
             expCompSetter={setExpComponents}
+            handleCheck={handleArray}
           />
         </div>
         <div className="previewArea">
