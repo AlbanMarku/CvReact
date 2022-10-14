@@ -1,10 +1,12 @@
 import React from 'react';
 import './footer.css';
+import logo from './logo.png';
 
 function Footer() {
   return (
     <div className="Footer">
-      <p>Footer area</p>
+      <strong>AlbanMarku</strong>
+      <a href="https://github.com/AlbanMarku"><img src={logo} alt="git logo" /></a>
     </div>
   );
 }

@@ -13,14 +13,16 @@ input {
 	padding: 20px;
 }
 
-.compBtn {
+.compBtn,
+.printButton {
 	display: flex;
 	justify-content: center;
 	background-color: black;
 	margin: 20px;
 }
 
-.compBtn button {
+.compBtn button,
+.printButton button {
 	padding: 10px;
 	width: 100%;
 }

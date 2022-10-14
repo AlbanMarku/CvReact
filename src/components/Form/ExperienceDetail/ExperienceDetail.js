@@ -43,5 +43,5 @@ export default ExperienceDetail;
 
 ExperienceDetail.propTypes = {
   handleCheck: PropTypes.func.isRequired,
-  id: PropTypes.number.isRequired,
+  id: PropTypes.string.isRequired,
 };

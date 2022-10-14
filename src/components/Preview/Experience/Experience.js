@@ -23,5 +23,5 @@ export default Experience;
 Experience.propTypes = {
   pos: PropTypes.string.isRequired,
   comp: PropTypes.string.isRequired,
-  workTime: PropTypes.number.isRequired,
+  workTime: PropTypes.string.isRequired,
 };

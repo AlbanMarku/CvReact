@@ -15,6 +15,7 @@ function Preview({ pInfo, expComp }) {
         {
           expComp.map((obj) => (
             <Experience
+              key={obj.id}
               pos={obj.pos}
               workTime={obj.workMonths}
               comp={obj.company}
@@ -36,6 +37,6 @@ export default Preview;
 
 Preview.propTypes = {
   pInfo: PropTypes.objectOf(PropTypes.string).isRequired,
-  expComp: PropTypes.objectOf(PropTypes.string).isRequired,
+  expComp: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.string)).isRequired,
 
 };

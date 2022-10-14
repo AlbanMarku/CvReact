@@ -4,7 +4,7 @@ import './header.css';
 function Header() {
   return (
     <div className="Header">
-      <h1>I am the header</h1>
+      <h1>CV creator</h1>
     </div>
   );
 }

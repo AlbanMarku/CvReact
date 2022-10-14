@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import React from 'react';
 import './form.css';
 import uniqid from 'uniqid';
@@ -33,6 +32,7 @@ function Form({
         {
           expComp.map((obj) => (
             <ExperienceDetail
+              key={obj.id}
               handleCheck={handleCheck}
               id={obj.id}
             />
@@ -42,8 +42,9 @@ function Form({
           <button type="button" onClick={handleClick}>Add comp</button>
         </div>
       </form>
-      <button type="button" onClick={handlePdf}>Print CV</button>
-
+      <div className="printButton">
+        <button type="button" onClick={handlePdf}>Print CV</button>
+      </div>
     </div>
   );
 }
@@ -53,7 +54,7 @@ export default Form;
 Form.propTypes = {
   setter: PropTypes.func.isRequired,
   info: PropTypes.objectOf(PropTypes.string).isRequired,
-  expComp: PropTypes.objectOf(PropTypes.number).isRequired,
+  expComp: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.string)).isRequired,
   expCompSetter: PropTypes.func.isRequired,
   handleCheck: PropTypes.func.isRequired,
 
