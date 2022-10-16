@@ -36,8 +36,10 @@
 
 .educationDetails {
 	grid-area: edu;
+	padding: 20px;
 }
 
 .sideDetails {
 	grid-area: side;
+	padding: 20px;
 }

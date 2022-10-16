@@ -3,8 +3,10 @@ import PropTypes from 'prop-types';
 import './preview.css';
 import Personal from './Personal/Personal';
 import Experience from './Experience/Experience';
+import Education from './Education/Education';
+import SideInfo from './SideInfo/SideInfo';
 
-function Preview({ pInfo, expComp }) {
+function Preview({ pInfo, expComp, eduComp }) {
   return (
     <div className="Preview">
       <div className="headerDetails">
@@ -24,10 +26,21 @@ function Preview({ pInfo, expComp }) {
         }
       </div>
       <div className="educationDetails">
-        <p>education</p>
+        <h2 className="previewTitle">Education</h2>
+        {
+          eduComp.map((obj) => (
+            <Education
+              key={obj.id}
+              org={obj.org}
+              degree={obj.degree}
+              year={obj.year}
+            />
+          ))
+        }
       </div>
       <div className="sideDetails">
-        <p>side area</p>
+        <h2 className="previewTitle">Contact details</h2>
+        <SideInfo />
       </div>
     </div>
   );
@@ -38,5 +51,5 @@ export default Preview;
 Preview.propTypes = {
   pInfo: PropTypes.objectOf(PropTypes.string).isRequired,
   expComp: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.string)).isRequired,
-
+  eduComp: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.string)).isRequired,
 };

@@ -1,0 +1,7 @@
+.Education {
+	margin: 20px 0px;
+}
+
+.Education > * {
+	margin: 10px 0px;
+}

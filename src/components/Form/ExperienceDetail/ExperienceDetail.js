@@ -22,7 +22,7 @@ function ExperienceDetail({
   };
 
   useEffect(() => {
-    handleCheck(experienceInfo);
+    handleCheck(experienceInfo, 'job');
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [experienceInfo]);
 

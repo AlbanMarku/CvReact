@@ -25,4 +25,9 @@ input {
 .printButton button {
 	padding: 10px;
 	width: 100%;
+	border-style: none;
+}
+
+.printButton button {
+	background-color: rgb(17, 92, 255);
 }

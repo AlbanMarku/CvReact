@@ -28,7 +28,7 @@ main {
 .formArea {
 	display: flex;
 	flex-direction: column;
-	flex: 1 1 700px;
+	flex: 0 1 700px;
 	background-color: black;
 }
 

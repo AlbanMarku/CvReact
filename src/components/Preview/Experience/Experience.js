@@ -6,8 +6,8 @@ function Experience({ pos, comp, workTime }) {
   let position = pos;
   let company = comp;
   let workMonths = workTime;
-  if (!position) position = 'nothing';
-  if (!company) company = 'company';
+  if (!position) position = 'Work position';
+  if (!company) company = 'Company';
   if (!workMonths) workMonths = 'Amount of months';
   return (
     <div className="Experience">

@@ -11,18 +11,35 @@ function App() {
   const [expComponents, setExpComponents] = useState([{
     pos: '', workMonths: '', company: '', id: uniqid('expObj-'),
   }]);
-  const handleArray = (item) => {
-    const modifiedArr = expComponents.map((arrayItem) => {
+  const [eduComponents, setEduComponents] = useState([{
+    org: '', degree: '', year: '', id: uniqid('eduObj-'),
+  }]);
+
+  const handleArray = (item, compType) => {
+    let arrayTarget = [];
+    let setTarget;
+
+    if (compType === 'job') {
+      arrayTarget = expComponents;
+      setTarget = setExpComponents;
+    } else {
+      arrayTarget = eduComponents;
+      setTarget = setEduComponents;
+    }
+
+    const modifiedArr = arrayTarget.map((arrayItem) => {
       if (item.id === arrayItem.id) {
         return item;
       }
       return arrayItem;
     });
-    setExpComponents(modifiedArr);
+    setTarget(modifiedArr);
   };
+
   const updatePersonal = (n) => {
     setPersonalInfo(n);
   };
+
   return (
     <div className="App">
       <header>
@@ -36,12 +53,15 @@ function App() {
             expComp={expComponents}
             expCompSetter={setExpComponents}
             handleCheck={handleArray}
+            eduComp={eduComponents}
+            eduCompSetter={setEduComponents}
           />
         </div>
         <div className="previewArea">
           <Preview
             pInfo={personalInfo}
             expComp={expComponents}
+            eduComp={eduComponents}
           />
         </div>
       </main>
