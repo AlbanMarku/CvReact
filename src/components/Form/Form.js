@@ -11,6 +11,7 @@ import SideDetail from './SideDetail/SideDetail';
 
 function Form({
   setter, info, expComp, expCompSetter, handleCheck, eduComp, eduCompSetter,
+  contactInfo, contactSetter,
 }) {
   const handleClick = () => {
     expCompSetter([...expComp, {
@@ -65,7 +66,10 @@ function Form({
           <button type="button" onClick={handleEduClick}>Add another education</button>
         </div>
         <h2 className="titles">Profile details</h2>
-        <SideDetail />
+        <SideDetail
+          contactInfo={contactInfo}
+          contactSetter={contactSetter}
+        />
       </form>
       <div className="printButton">
         <button type="button" onClick={handlePdf}>Print CV</button>
@@ -84,5 +88,6 @@ Form.propTypes = {
   handleCheck: PropTypes.func.isRequired,
   eduComp: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.string)).isRequired,
   eduCompSetter: PropTypes.func.isRequired,
-
+  contactInfo: PropTypes.objectOf(PropTypes.string).isRequired,
+  contactSetter: PropTypes.func.isRequired,
 };

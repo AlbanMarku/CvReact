@@ -1,6 +1,6 @@
-/* eslint-disable react/prop-types */
 import React from 'react';
 import './personal.css';
+import PropTypes from 'prop-types';
 
 function Personal({ pInfo }) {
   let { firstName } = pInfo;
@@ -21,3 +21,7 @@ function Personal({ pInfo }) {
 }
 
 export default Personal;
+
+Personal.propTypes = {
+  pInfo: PropTypes.objectOf(PropTypes.string).isRequired,
+};

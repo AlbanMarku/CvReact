@@ -6,7 +6,9 @@ import Experience from './Experience/Experience';
 import Education from './Education/Education';
 import SideInfo from './SideInfo/SideInfo';
 
-function Preview({ pInfo, expComp, eduComp }) {
+function Preview({
+  pInfo, expComp, eduComp, contactInfo,
+}) {
   return (
     <div className="Preview">
       <div className="headerDetails">
@@ -40,7 +42,7 @@ function Preview({ pInfo, expComp, eduComp }) {
       </div>
       <div className="sideDetails">
         <h2 className="previewTitle">Contact details</h2>
-        <SideInfo />
+        <SideInfo contactInfo={contactInfo} />
       </div>
     </div>
   );
@@ -52,4 +54,5 @@ Preview.propTypes = {
   pInfo: PropTypes.objectOf(PropTypes.string).isRequired,
   expComp: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.string)).isRequired,
   eduComp: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.string)).isRequired,
+  contactInfo: PropTypes.objectOf(PropTypes.string).isRequired,
 };
