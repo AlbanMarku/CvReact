@@ -32,14 +32,17 @@
 .experienceDetails {
 	grid-area: exp;
 	padding: 20px;
+	background-color: darkslategrey;
 }
 
 .educationDetails {
 	grid-area: edu;
 	padding: 20px;
+	background-color: darkslategrey;
 }
 
 .sideDetails {
 	grid-area: side;
 	padding: 20px;
+	background-color: darkslategrey;
 }
