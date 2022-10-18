@@ -1,3 +1,11 @@
 .SideInfo {
 	margin: 20px 0px;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	align-items: center;
+}
+
+#profileImg {
+	max-width: 300px;
 }

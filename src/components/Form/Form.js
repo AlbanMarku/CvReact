@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
 import './form.css';
 import uniqid from 'uniqid';
@@ -11,7 +12,7 @@ import SideDetail from './SideDetail/SideDetail';
 
 function Form({
   setter, info, expComp, expCompSetter, handleCheck, eduComp, eduCompSetter,
-  contactInfo, contactSetter,
+  contactInfo, contactSetter, setPreview,
 }) {
   const handleClick = () => {
     expCompSetter([...expComp, {
@@ -69,6 +70,7 @@ function Form({
         <SideDetail
           contactInfo={contactInfo}
           contactSetter={contactSetter}
+          setPreview={setPreview}
         />
       </form>
       <div className="printButton">

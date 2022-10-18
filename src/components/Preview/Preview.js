@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
 import PropTypes from 'prop-types';
 import './preview.css';
@@ -7,7 +8,7 @@ import Education from './Education/Education';
 import SideInfo from './SideInfo/SideInfo';
 
 function Preview({
-  pInfo, expComp, eduComp, contactInfo,
+  pInfo, expComp, eduComp, contactInfo, preview,
 }) {
   return (
     <div className="Preview">
@@ -42,7 +43,7 @@ function Preview({
       </div>
       <div className="sideDetails">
         <h2 className="previewTitle">Contact details</h2>
-        <SideInfo contactInfo={contactInfo} />
+        <SideInfo contactInfo={contactInfo} preview={preview} />
       </div>
     </div>
   );

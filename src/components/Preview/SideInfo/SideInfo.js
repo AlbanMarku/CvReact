@@ -1,8 +1,9 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
 import './sideInfo.css';
 import PropTypes from 'prop-types';
 
-function SideInfo({ contactInfo }) {
+function SideInfo({ contactInfo, preview }) {
   let { email } = contactInfo;
   let { phone } = contactInfo;
 
@@ -10,6 +11,7 @@ function SideInfo({ contactInfo }) {
   if (!phone) phone = 'Phone number';
   return (
     <div className="SideInfo">
+      <img id="profileImg" src={preview} alt="Insert profile here" />
       <p>{email}</p>
       <p>{phone}</p>
     </div>

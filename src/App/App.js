@@ -15,6 +15,7 @@ function App() {
     org: '', degree: '', year: '', id: uniqid('eduObj-'),
   }]);
   const [contactInfo, setContactInfo] = useState({ email: '', phone: '' });
+  const [preview, setPreview] = useState(null);
 
   const handleArray = (item, compType) => {
     let arrayTarget = [];
@@ -58,6 +59,7 @@ function App() {
             eduCompSetter={setEduComponents}
             contactInfo={contactInfo}
             contactSetter={setContactInfo}
+            setPreview={setPreview}
           />
         </div>
         <div className="previewArea">
@@ -66,6 +68,7 @@ function App() {
             expComp={expComponents}
             eduComp={eduComponents}
             contactInfo={contactInfo}
+            preview={preview}
           />
         </div>
       </main>
