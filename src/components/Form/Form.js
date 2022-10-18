@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import React from 'react';
 import './form.css';
 import uniqid from 'uniqid';
@@ -92,4 +91,5 @@ Form.propTypes = {
   eduCompSetter: PropTypes.func.isRequired,
   contactInfo: PropTypes.objectOf(PropTypes.string).isRequired,
   contactSetter: PropTypes.func.isRequired,
+  setPreview: PropTypes.func.isRequired,
 };

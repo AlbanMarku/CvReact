@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import React from 'react';
 import PropTypes from 'prop-types';
 import './preview.css';
@@ -56,4 +55,9 @@ Preview.propTypes = {
   expComp: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.string)).isRequired,
   eduComp: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.string)).isRequired,
   contactInfo: PropTypes.objectOf(PropTypes.string).isRequired,
+  preview: PropTypes.string,
+};
+
+Preview.defaultProps = {
+  preview: 'empty file',
 };

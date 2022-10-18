@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import React, { useEffect, useState } from 'react';
 import './sideDetail.css';
 import PropTypes from 'prop-types';
@@ -46,4 +45,5 @@ export default SideDetail;
 SideDetail.propTypes = {
   contactInfo: PropTypes.objectOf(PropTypes.string).isRequired,
   contactSetter: PropTypes.func.isRequired,
+  setPreview: PropTypes.func.isRequired,
 };
